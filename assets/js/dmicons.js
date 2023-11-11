@@ -36,6 +36,8 @@ document.addEventListener('DOMContentLoaded', function () {
                 // Construct the path to the icon
                 var iconPath = basePath + 'assets/icons/' + iconName + '.svg';
 
+                console.log(iconPath)
+
                 var colorBg = (dmIcon.getAttribute("color-bg")) ? dmIcon.getAttribute("color-bg") : "#000"
                 var colorFg = (dmIcon.getAttribute("color-fg")) ? dmIcon.getAttribute("color-fg") : "#fff"
 
