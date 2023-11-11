@@ -1,5 +1,5 @@
 const basePath = "https://raw.githubusercontent.com/dmelin/icons/main/"
-
+console.log("DM-Icons JS loaded")
 document.addEventListener('DOMContentLoaded', function () {
     console.log("started")
     var observer = new MutationObserver(function (mutationsList, observer) {
