@@ -23,6 +23,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     var dmIcons = document.querySelectorAll('dm-icon')
     dmIcons.forEach(function (dmIcon) {
+        console.log("icon found")
         // Iterate through all attributes of the current dm-icon element
         for (var i = 0; i < dmIcon.attributes.length; i++) {
             var attributeName = dmIcon.attributes[i].name;
