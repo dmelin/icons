@@ -1,3 +1,5 @@
+const basePath = "https://raw.githubusercontent.com/dmelin/icons/main/"
+
 document.addEventListener('DOMContentLoaded', function () {
     console.log("started")
     var observer = new MutationObserver(function (mutationsList, observer) {
@@ -32,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 console.log("icon", iconName)
 
                 // Construct the path to the icon
-                var iconPath = '/assets/icons/' + iconName + '.svg';
+                var iconPath = basePath + 'assets/icons/' + iconName + '.svg';
 
                 var colorBg = (dmIcon.getAttribute("color-bg")) ? dmIcon.getAttribute("color-bg") : "#000"
                 var colorFg = (dmIcon.getAttribute("color-fg")) ? dmIcon.getAttribute("color-fg") : "#fff"
