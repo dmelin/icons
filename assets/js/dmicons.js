@@ -1,4 +1,4 @@
-const basePath = "https://cdn.jsdelivr.net/gh/dmelin/icons/"
+const basePath = "https://cdn.jsdelivr.net/gh/dmelin/icons@alpha/"
 console.log("DM-Icons JS loaded")
 document.addEventListener('DOMContentLoaded', function () {
     console.log("started")
