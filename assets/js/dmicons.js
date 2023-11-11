@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 if (mutation.attributeName === "color-bg") {
                     path = "A"
                 }
-                mutation.target.querySelectorAll(`#color${path} > path, #color${path} > circle, #color${path} > rect`).forEach(function (path) {
+                mutation.target.querySelectorAll(`#color${path} path, #color${path} circle, #color${path} rect`).forEach(function (path) {
                     path.style.fill = mutation.target.getAttribute(mutation.attributeName)
                 })
 
@@ -52,11 +52,11 @@ document.addEventListener('DOMContentLoaded', function () {
                         dmIcon.innerHTML = svgContent;
                     })
                     .then(stuff => {
-                        dmIcon.querySelectorAll('#colorA > path, #colorA > circle, #colorA > rect').forEach(function (path) {
+                        dmIcon.querySelectorAll('#colorA path, #colorA circle, #colorA rect').forEach(function (path) {
                             console.log("path", "found background", colorBg)
                             path.style.fill = colorBg
                         })
-                        dmIcon.querySelectorAll('#colorB > path, #colorB > circle, #colorB > rect').forEach(function (path) {
+                        dmIcon.querySelectorAll('#colorB path, #colorB circle, #colorB rect').forEach(function (path) {
                             console.log("path", "found foreground", colorFg)
                             path.style.fill = colorFg
                         })
