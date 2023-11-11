@@ -1,0 +1,57 @@
+dm-icon {
+    width: 0.675em;
+    height: 0.675em;
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+
+    svg {
+        width: inherit;
+        height: inherit;
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        #colorB,
+        #colorA {
+
+            path,
+            rect,
+            circle {
+                transition: transform 0.4s, filter 0.4s;
+                filter: var(--filter-fg);
+                transform: var(--transform-fg);
+
+                transform-origin: center;
+            }
+        }
+    }
+
+    &[animated] {
+        &:not([hover-animation]) {
+            &[animation-bounce] {
+                animation: dm-bounce 1s infinite alternate;
+            }
+        }
+
+        &[hover-animation] {
+            &[animation-bounce] {
+                &:hover {
+                    animation: dm-bounce 1s infinite alternate;
+                }
+            }
+        }
+    }
+}
+
+@keyframes dm-bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-0.1em);
+    }
+}

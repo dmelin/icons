@@ -1,0 +1,61 @@
+dm-icon {
+  width: 0.675em;
+  height: 0.675em;
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+}
+dm-icon svg {
+  width: inherit;
+  height: inherit;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+dm-icon svg #colorB path,
+dm-icon svg #colorB rect,
+dm-icon svg #colorB circle,
+dm-icon svg #colorA path,
+dm-icon svg #colorA rect,
+dm-icon svg #colorA circle {
+  -webkit-transition: -webkit-transform 0.4s, -webkit-filter 0.4s;
+  transition: -webkit-transform 0.4s, -webkit-filter 0.4s;
+  transition: transform 0.4s, filter 0.4s;
+  transition: transform 0.4s, filter 0.4s, -webkit-transform 0.4s, -webkit-filter 0.4s;
+  -webkit-filter: var(--filter-fg);
+          filter: var(--filter-fg);
+  -webkit-transform: var(--transform-fg);
+          transform: var(--transform-fg);
+  -webkit-transform-origin: center;
+          transform-origin: center;
+}
+dm-icon[animated]:not([hover-animation])[animation-bounce] {
+  -webkit-animation: dm-bounce 1s infinite alternate;
+          animation: dm-bounce 1s infinite alternate;
+}
+dm-icon[animated][hover-animation][animation-bounce]:hover {
+  -webkit-animation: dm-bounce 1s infinite alternate;
+          animation: dm-bounce 1s infinite alternate;
+}
+
+@-webkit-keyframes dm-bounce {
+  0%, 100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  50% {
+    -webkit-transform: translateY(-0.1em);
+            transform: translateY(-0.1em);
+  }
+}
+
+@keyframes dm-bounce {
+  0%, 100% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  50% {
+    -webkit-transform: translateY(-0.1em);
+            transform: translateY(-0.1em);
+  }
+}
